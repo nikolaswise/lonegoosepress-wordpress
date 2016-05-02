@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/fuzzco/fuzzcode"]
+	path = wp-content/themes/fuzzco/fuzzcode
+	url = https://bitbucket.org/fuzzco/fuzzcode
