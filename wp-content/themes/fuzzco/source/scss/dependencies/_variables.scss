@@ -1,0 +1,82 @@
+//  Vatiables
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//  1. Vertical spacing
+//  2. Colors
+//  3. Component colors
+//  4. Fonts
+//  5. Buttons
+//  6. Transitions
+
+// 1. Vertical spacing
+// ---------
+
+$base-spacing: 24px;
+
+// 2. Colors
+// ---------
+// Color naming $color-[Color Name]-[Color Variation]
+// Example $color-blue-light
+
+$color-black: #000000;
+$color-white: #ffffff;
+$color-red: #f44336;
+$color-purple-deep: #673ab7;
+$color-blue: #2196f3;
+$color-blue-light: #03a9f4;
+$color-green: #4caf50;
+$color-green-light: #4caf50;
+$color-yellow: #ffeb3b;
+$color-gray: #9e9e9e;
+$color-gray-light: #fafafa;
+$color-gray-dark: #424242;
+
+// 3. Component colors
+// ---------
+
+$border-color: $color-gray-light;
+$link-color: $color-blue;
+$link-color-hover: $color-blue-light;
+$link-color-active: $color-blue-light;
+$link-color-visited: $color-blue-light;
+
+// 4. Fonts
+// ---------
+
+// Line heights
+$body-line-height: 1.6;
+$header-line-height: 1.1;
+
+// Font sizes
+$font-size-xsmall: 13px;
+$font-size-small: 18px;
+$font-size-medium: 32px;
+$font-size-large: 58px;
+$font-size-xlarge: 105px;
+
+// Font families
+$font-body: "adriane", serif;
+$font-header: "proxima-nova", sans-serif;
+
+//  5. Buttons
+// ---------
+
+// Primary
+$button-primary-background: $color-blue;
+$button-primary-color: $color-white;
+$button-primary-hover-background: $color-blue-light;
+$button-primary-hover-color: $color-white;
+
+// Secondary
+$button-secondary-background: $color-green;
+$button-secondary-color: $color-white;
+$button-secondary-hover-background: $color-green-light;
+$button-secondary-hover-color: $color-white;
+
+//  6. Transitions
+// ---------
+$transition-speed-fast: 250ms;
+$transition-speed-medium: 500ms;
+$transition-speed-slow: 500ms;

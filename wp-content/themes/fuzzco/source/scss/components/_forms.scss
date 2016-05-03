@@ -1,0 +1,24 @@
+//  Froms
+//  ---------------------------
+
+input, textarea {
+  @include font-body-regular();
+  @include font-size-small();
+  border: 1px solid #111;
+  padding: 8px;
+  margin: 0 1em 0 0;
+  vertical-align: middle;
+  outline: none;
+  &:hover,
+  &:focus {
+    border-color: #00a9c5;
+  }
+}
+
+input[type=text] {}
+
+textarea {}
+
+input[type=radio] {}
+
+input[type=checkbox] {}
