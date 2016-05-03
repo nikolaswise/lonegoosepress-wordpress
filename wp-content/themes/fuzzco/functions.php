@@ -73,6 +73,19 @@ function fuzzco_setup() {
 endif;
 add_action( 'after_setup_theme', 'fuzzco_setup' );
 
+
+function fuzzco_scripts_init() {
+
+  wp_enqueue_style('fuzzco_main', get_template_directory_uri() . '/style.min.css', false, filemtime(get_stylesheet_directory() . '/style.min.css'));
+
+  wp_enqueue_script('jquery');
+
+  wp_register_script('fuzzco_scripts', get_template_directory_uri() . '/js/bundle.js', array(), filemtime(get_stylesheet_directory() . '/js/bundle.js'), true);
+  wp_enqueue_script('fuzzco_scripts');
+
+}
+add_action('wp_enqueue_scripts', 'fuzzco_scripts_init');
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
