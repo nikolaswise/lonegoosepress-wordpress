@@ -15,3 +15,14 @@ section {
     padding-bottom: $base-spacing*2;
   }
 }
+
+
+.callout {
+  border: none;
+}
+
+@include breakpoint(large only) {
+  .row {
+    max-width: 76.5rem;
+  }
+};

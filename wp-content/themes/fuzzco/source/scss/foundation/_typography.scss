@@ -6,6 +6,7 @@
 //   1. Headers
 //   2. Paragraphs, links and list
 //   3. Strong, emphasis, other
+//   4. Typekit
 
 // 1. Header
 // ---------
@@ -84,4 +85,19 @@ time {}
 
 hr {
   border-color: $border-color;
+}
+
+// 4. Typekit
+// ---------
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, a, strong, b, em, i, label {
+  opacity: 0;
+  transition: opacity 100ms ease-out;
+}
+
+.wf-active,
+.wf-inactive {
+  h1, h2, h3, h4, h5, h6, p, ul, ol, a, strong, b, em, i, label {
+    opacity: 1;
+  }
 }
