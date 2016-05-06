@@ -25,10 +25,10 @@
 		return;
 	}
 
-	menu.setAttribute( 'aria-expanded', 'false' );
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-		menu.className += ' nav-menu';
-	}
+	// menu.setAttribute( 'aria-expanded', 'false' );
+	// if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
+	// 	menu.className += ' nav-menu';
+	// }
 
 	button.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
