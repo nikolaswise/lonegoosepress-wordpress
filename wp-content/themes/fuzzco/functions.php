@@ -152,3 +152,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+ * Hide Admin bar when logged in
+ */
+show_admin_bar( false );
