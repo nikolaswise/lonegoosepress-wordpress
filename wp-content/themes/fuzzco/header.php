@@ -55,6 +55,6 @@
           </nav><!-- #site-navigation -->
         </div>
 		</div>
-	</header><!-- #masthead -->
+	</header>
 
 	<div id="content" class="site-content">
