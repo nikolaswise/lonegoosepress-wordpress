@@ -4,7 +4,7 @@
   "description": "Starter kit using NPM based on Foundation",
   "scripts": {
     "watch": "npm run build && npm run serve & npm run watch:css & npm run watch:js",
-    "watch:css": "nodemon -e scss -x 'npm run build:css'",
+    "watch:css": "watch 'npm run build:css' source/scss/",
     "watch:js": "watchify source/js/*.js -o js/bundle.js",
     "build": "npm run clean && npm run build:css && npm run build:js",
     "build:css": "node-sass source/scss/style.scss | postcss --config postcss.config.js",
@@ -26,6 +26,7 @@
     "postcss-reporter": "^1.3.3",
     "stylelint": "^5.4.0",
     "uglifyjs": "^2.4.10",
+    "watch": "^0.18.0",
     "watchify": "^3.7.0"
   },
   "dependencies": {
