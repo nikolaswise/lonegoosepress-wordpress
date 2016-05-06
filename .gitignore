@@ -38,6 +38,11 @@ wp-content/themes/**/.cache/
 # ignore node modules
 wp-content/themes/**/node_modules/
 
+# ignore compiled CSS and JavaScript
+wp-content/themes/**/style.css
+wp-content/themes/**/style.min.css
+wp-content/themes/**/bundle.js
+
 #ignore npm debug log
 wp-content/themes/**/npm-debug.log
 
