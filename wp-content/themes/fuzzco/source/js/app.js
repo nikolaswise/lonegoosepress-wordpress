@@ -29,15 +29,15 @@ app.onload = onload;
 // Replace/Create the global namespace
 window.app = app;
 
-// http://www.mattburkedev.com/export-a-global-to-the-window-object-with-browserify/
-// look into http://www.forbeslindesay.co.uk/post/46324645400/standalone-browserify-builds
-
 /*
   jQuery document ready
+
+  All global onload scripts should be added to onload.js
+  If page level script add to js/pages/PAGENAME.js
+  See pages/home.js example and call within events/onload.js
 */
 $(function() {
+
   app.onload();
   app.yo();
 });
-
-// look into http://gregfranko.com/jquery-best-practices/ and https://github.com/holidayextras/culture/blob/master/clientside-jquery-best-practices.md

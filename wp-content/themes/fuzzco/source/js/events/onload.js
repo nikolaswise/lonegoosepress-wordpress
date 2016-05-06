@@ -1,5 +1,5 @@
 var $ = require('jquery');
-var test = require('../pages/home.js');
+var homepage = require('../pages/home.js');
 
 module.exports = function () {
   var button = $('<button/>').attr('class','button').html('click me').on('click', function() {
@@ -11,6 +11,6 @@ module.exports = function () {
 
   $('.for-button').append(button);
 
-  // Call from home.js
-  test.something();
+  // On load call from home.js
+  homepage.onload();
 }

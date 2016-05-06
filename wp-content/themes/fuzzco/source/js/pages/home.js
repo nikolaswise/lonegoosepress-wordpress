@@ -1,7 +1,7 @@
 var $ = require('jquery');
 
 module.exports = {
-  something: function () {
-    console.log('something() from home.js');
+  onload: function () {
+    console.log('homepage() from home.js');
   }
 };
