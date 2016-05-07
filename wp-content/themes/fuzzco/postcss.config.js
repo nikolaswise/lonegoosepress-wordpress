@@ -5,10 +5,6 @@ var cssprefixes = [
   'Android >= 4',
   'Chrome >= 35',
   'Firefox >= 31',
-  // Note: Edge versions in Autoprefixer & Can I Use refer to the EdgeHTML rendering engine version,
-  // NOT the Edge app version shown in Edge's "About" screen.
-  // For example, at the time of writing, Edge 20 on an up-to-date system uses EdgeHTML 12.
-  // See also https://github.com/Fyrd/caniuse/issues/1928
   'Edge >= 12',
   'Explorer >= 11',
   'iOS >= 7',
