@@ -7,7 +7,7 @@
     "watch:css": "watch 'npm run build:css' source/scss/",
     "watch:js": "watchify source/js/*.js -o js/bundle.js",
     "build": "npm run clean && npm run build:css && npm run build:js",
-    "build:css": "node-sass source/scss/style.scss | postcss --config postcss.config.js",
+    "build:css": "node-sass source/scss/style.scss > style.min.css",
     "build:js": "browserify source/js/app.js | uglifyjs -c > js/bundle.js",
     "serve": "browser-sync start --proxy 'fuzzcode.dev' --files '**/*' '*.php' --no-ghost-mode --no-notify",
     "clean": "rm -rf {style.min.css,js/bundle.js} && mkdir -p js"
