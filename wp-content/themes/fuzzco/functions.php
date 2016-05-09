@@ -74,16 +74,6 @@ endif;
 add_action( 'after_setup_theme', 'fuzzco_setup' );
 
 
-function fuzzco_scripts_init() {
-
-  wp_enqueue_style('fuzzco_main', get_template_directory_uri() . '/style.min.css', false, filemtime(get_stylesheet_directory() . '/style.min.css'));
-
-  wp_register_script('fuzzco_scripts', get_template_directory_uri() . '/js/bundle.js', array(), filemtime(get_stylesheet_directory() . '/js/bundle.js'), true);
-  wp_enqueue_script('fuzzco_scripts');
-
-}
-add_action('wp_enqueue_scripts', 'fuzzco_scripts_init');
-
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -115,10 +105,27 @@ function fuzzco_widgets_init() {
 add_action( 'widgets_init', 'fuzzco_widgets_init' );
 
 /**
+ * Deregister wordpress default scripts that
+ * Fuzzco doesn't use
+ */
+function fuzzco_deregister_scripts(){
+  // Embed script helper for videos
+  wp_deregister_script( 'wp-embed' );
+  // Wordpress jQuery
+  wp_deregister_script('jquery');
+  // Wordpress style.css
+  wp_deregister_style('style');
+}
+add_action( 'wp_footer', 'fuzzco_deregister_scripts' );
+
+/**
  * Enqueue scripts and styles.
  */
 function fuzzco_scripts() {
-	wp_enqueue_style( 'fuzzco-style', get_stylesheet_uri() );
+  wp_enqueue_style('fuzzco_main', get_template_directory_uri() . '/style.min.css', false, filemtime(get_stylesheet_directory() . '/style.min.css'));
+
+  wp_register_script('fuzzco_scripts', get_template_directory_uri() . '/js/bundle.js', array(), filemtime(get_stylesheet_directory() . '/js/bundle.js'), true);
+  wp_enqueue_script('fuzzco_scripts');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
