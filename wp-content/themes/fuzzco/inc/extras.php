@@ -59,3 +59,36 @@ function disable_emojicons_tinymce( $plugins ) {
     return array();
   }
 }
+
+/**
+ * Add correct GA ID based on if the site is live or development
+ */
+
+$host = $_SERVER['HTTP_HOST'];
+if (strpos($host,'.dev') !== false) {
+  // Add Fuzzcode Testing GA?
+  define('GOOGLE_ANALYTICS_ID', 'UA-xxxxxx-1');
+} else {
+  // Client code
+  define('GOOGLE_ANALYTICS_ID', 'UA-xxxxxx-1');
+}
+
+
+function google_analytics() { ?>
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '<?php echo GOOGLE_ANALYTICS_ID; ?>', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+  <!-- End Google Analytics -->
+<?php }
+
+if (GOOGLE_ANALYTICS_ID && !current_user_can('manage_options')) {
+  add_action('wp_footer', 'google_analytics', 20);
+}
