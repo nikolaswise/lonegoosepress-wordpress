@@ -2,16 +2,12 @@
   "use": [
     "postcss-import",
     "autoprefixer",
-    "css-mqpacker",
-    "cssnano"
+    "css-mqpacker"
   ],
   "output": "style.min.css",
   "local-plugins": true,
   "watch": false,
   "autoprefixer": {
     "browsers": "> 5%"
-  },
-  "cssnano": {
-    "sourcemap": true
   }
 }
