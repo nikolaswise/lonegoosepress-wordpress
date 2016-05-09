@@ -23,13 +23,13 @@
   <meta name="twitter:site" content=""> <?php // Add @username ?>
 
   <!--
-  Social tags taken from Facebook guidelines:
-  https://developers.facebook.com/docs/sharing/best-practices
+    Social tags taken from Facebook guidelines:
+    https://developers.facebook.com/docs/sharing/best-practices
   -->
   <?php if (is_front_page()) : ?>
-    <meta property="og:title" content="<?php bloginfo('title'); ?>" />
+  <meta property="og:title" content="<?php bloginfo('title'); ?>" />
   <?php else : ?>
-    <meta property="og:title" content="<?php echo get_the_title(); ?> | <?php bloginfo('title'); ?>">
+  <meta property="og:title" content="<?php echo get_the_title(); ?> | <?php bloginfo('title'); ?>">
   <?php endif; ?>
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
   <meta property="og:description" content="<?php echo get_bloginfo('description', 'display') ?>">
