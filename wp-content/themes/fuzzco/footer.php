@@ -11,12 +11,10 @@
 
 ?>
 
-	</div><!-- #content -->
 
-	<footer class="site-footer" role="contentinfo">
+<footer class="site-footer" role="contentinfo">
 
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+</footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
 

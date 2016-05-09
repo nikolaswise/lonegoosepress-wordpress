@@ -55,7 +55,7 @@ https://developers.facebook.com/docs/sharing/best-practices
 </head>
 
 <body <?php body_class(); ?> id="page-<?php echo is_front_page() ? 'home' : get_query_var('name');?>">
-<div id="page" class="site">
+
 
 	<header class="site-header" role="banner">
 		  <div class="row">
@@ -80,4 +80,3 @@ https://developers.facebook.com/docs/sharing/best-practices
 		</div>
 	</header>
 
-	<div id="content" class="site-content">
