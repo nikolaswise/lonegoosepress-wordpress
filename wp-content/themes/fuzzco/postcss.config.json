@@ -1,7 +1,8 @@
 {
   "use": [
     "postcss-import",
-    "autoprefixer"
+    "autoprefixer",
+    "mqpacker"
   ],
   "output": "style.min.css",
   "local-plugins": true,
