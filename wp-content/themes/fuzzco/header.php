@@ -15,6 +15,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<!--
+  Twitter card tags with combination of the open graph tags below
+  https://dev.twitter.com/cards/getting-started
+-->
+<meta name="twitter:card" content="<?php echo get_bloginfo('description', 'display') ?>">
+<meta name="twitter:site" content=""> <?php // Add @username ?>
+
+<!--
+Social tags taken from Facebook guidelines:
+https://developers.facebook.com/docs/sharing/best-practices
+-->
+<?php if (is_front_page()) : ?>
+  <meta property="og:title" content="<?php bloginfo('title'); ?>" />
+<?php else : ?>
+  <meta property="og:title" content="<?php echo get_the_title(); ?> | <?php bloginfo('title'); ?>">
+<?php endif; ?>
+<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+<meta property="og:description" content="<?php echo get_bloginfo('description', 'display') ?>">
+<meta property="og:url" content="<?php echo get_permalink($post->ID) ?>" />
+<!-- Recommended logo size is 1200 x 630px -->
+<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/-/img/logo.png">
+
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/-/img/favicon.ico">
 
 <!-- Typekit -->
 <script>
