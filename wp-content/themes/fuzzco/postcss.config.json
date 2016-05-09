@@ -2,10 +2,10 @@
   "use": [
     "postcss-import",
     "autoprefixer",
-    "mqpacker"
+    "css-mqpacker"
   ],
   "output": "style.min.css",
-  "local-plugins": true,
+  "local-plugins": false,
   "watch": false,
   "autoprefixer": {
     "browsers": "> 5%"
