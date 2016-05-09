@@ -6,7 +6,7 @@
     "cssnano"
   ],
   "output": "style.min.css",
-  "local-plugins": false,
+  "local-plugins": true,
   "watch": false,
   "autoprefixer": {
     "browsers": "> 5%"
