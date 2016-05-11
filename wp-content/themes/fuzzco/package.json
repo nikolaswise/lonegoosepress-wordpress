@@ -8,7 +8,7 @@
     "watch:js": "watchify source/js/*.js -o js/bundle.js",
     "build": "npm run clean && npm run build:css && npm run build:js",
     "build:css": "node-sass source/scss/style.scss | postcss --config postcss.config.json && cssnano style.min.css style.min.css",
-    "build:js": "browserify source/js/app.js | uglifyjs -c > js/bundle.js",
+    "build:js": "browserify source/js/app.js | uglifyjs -c warnings=false > js/bundle.js",
     "serve": "browser-sync start --proxy 'fuzzcode.dev' --files '**/*' '*.php' --no-ghost-mode --no-notify",
     "clean": "rm -rf {style.min.css,js/bundle.js} && mkdir -p js"
   },
@@ -16,6 +16,7 @@
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.11.2",
     "browserify": "^13.0.0",
+    "browsernizr": "^2.1.0",
     "copy-files": "^0.1.0",
     "css-mqpacker": "^4.0.1",
     "cssnano-cli": "^1.0.3",

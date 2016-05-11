@@ -39,7 +39,7 @@ wp-content/themes/**/.cache/
 wp-content/themes/**/node_modules/
 
 # ignore compiled CSS and JavaScript
-wp-content/themes/**/style.css
+!wp-content/themes/**/style.css
 wp-content/themes/**/style.min.css
 wp-content/themes/**/bundle.js
 
