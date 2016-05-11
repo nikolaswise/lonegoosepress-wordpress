@@ -14,6 +14,22 @@
 var $ = require('jquery');
 var fastclick = require('fastclick');
 var onload = require('./events/onload.js');
+var Debounce = require('./helpers/debounce.js');
+var Throttle = require('./helpers/throttle.js');
+
+// Browsernizr
+// Modernizr wrapper for use with browserify
+// https://www.npmjs.com/package/browsernizr
+// Call any required test below
+require('browsernizr/test/css/flexbox');
+require('browsernizr/test/svg');
+require('browsernizr/test/history');
+
+// Require Browsernizr
+var Modernizr = require('browsernizr');
+
+// Browsernizr usage
+// console.log(Modernizr.flexbox);
 
 /*
   Define global scope
