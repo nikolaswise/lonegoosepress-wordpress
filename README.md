@@ -113,28 +113,22 @@ If manual deployment run `$ npm run build` and update compiled files.
 
 All deployments should be done using [DeployBot](https://deploybot.com/). Connect with Nathan for setup. Staging server is automatically updated every time you check in. To deploy to staging or production servers use commit message typically [deploy: staging] or [deploy: production].
 
-### JavaScript style guide
+## Code style guides
 
-[View Wiki](https://bitbucket.org/fuzzco/fuzzcode/wiki/JavaScript)
+* [JavaScript style guide](https://bitbucket.org/fuzzco/fuzzcode/wiki/JavaScript%20Style%20Guide)
+* [CSS style guide](https://bitbucket.org/fuzzco/fuzzcode/wiki/CSS%20Style%20Guide)
+* [HTML style guide](https://bitbucket.org/fuzzco/fuzzcode/wiki/HTML%20Style%20Guide)
 
-### CSS style guide
-
-[View Wiki](https://bitbucket.org/fuzzco/fuzzcode/wiki/CSS)
-
-### HTML style guide
-
-[View Wiki](https://bitbucket.org/fuzzco/fuzzcode/wiki/)
-
-### Foundation documentation
+## Foundation documentation
 
 * http://foundation.zurb.com/sites/docs/sass-mixins.html
 
-### Git commit guidelines
+## Git commit guidelines
 
 * https://github.com/erlang/otp/wiki/Writing-good-commit-messages
 * http://chris.beams.io/posts/git-commit/
 
-### Tools
+## Tools
 
 Fuzzcode utilizes EditorConfig to maintain consistent coding styles accross different editors.
 
