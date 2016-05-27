@@ -12,7 +12,7 @@
     "build:css": "node-sass source/scss/style.scss | postcss --config postcss.config.json",
     "build:js": "browserify source/js/app.js | uglifyjs -c warnings=false > js/bundle.js",
     "serve": "browser-sync start --config bs-config.js",
-    "clean": "rm -rf build/{*,css,js} && mkdir -p build/css build/js"
+    "clean": "rm -rf {style.min.css,js/bundle.js} && mkdir -p js"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
