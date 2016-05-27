@@ -19,13 +19,12 @@ module.exports = {
             "port": 8080
         }
     },
-    "files": ['source/scss/', 'source/js/', '**/*.php'],
+    "files": ["./style.min.css", "./js/bundle.js", "./**/*.php", "./img/"],
     "watchOptions": {
       ignoreInitial: true
     },
-    "proxy": {
-      "target": "etsyconf.dev"
-    },
+    "server": false,
+    "proxy": "fuzzcode.dev",
     "port": 3000,
     "middleware": false,
     "serveStatic": [],
@@ -48,7 +47,7 @@ module.exports = {
     "browser": "default",
     "xip": false,
     "hostnameSuffix": false,
-    "reloadOnRestart": false,
+    "reloadOnRestart": true,
     "notify": false,
     "scrollProportionally": true,
     "scrollThrottle": 0,
