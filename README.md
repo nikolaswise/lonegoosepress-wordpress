@@ -138,4 +138,6 @@ Download the [EditorConfig](http://editorconfig.org/) Plugin for your editor.
 
 If deploying using Deploybot you must first deploy all files with only the build command ```npm install``` within the "Compile, compress, or minimize your code" section. Once all files have been deployed then add ```npm run build``` after ```npm install``` and redeploy all files. This will assure everything is correctly installed before a build is performed.
 
+The first deployment will take some time while it installs all the project dependecies, once everything is installed deployments will run quickly.
+
 You will need to ```cd``` into your themes directory for exmple ```cd wp-content/themes/fuzzco``` before running any other command within the "Compile, compress, or minimize your code" section. This is telling Deploybot which folder contains your ```package.json```.
