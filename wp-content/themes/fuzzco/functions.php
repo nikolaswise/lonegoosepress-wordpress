@@ -51,58 +51,9 @@ function fuzzco_setup() {
 		'gallery',
 		'caption',
 	) );
-
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	// add_theme_support( 'post-formats', array(
-	// 	'aside',
-	// 	'image',
-	// 	'video',
-	// 	'quote',
-	// 	'link',
-	// ) );
-
-	// Set up the WordPress core custom background feature.
-	// add_theme_support( 'custom-background', apply_filters( 'fuzzco_custom_background_args', array(
-	// 	'default-color' => 'ffffff',
-	// 	'default-image' => '',
-	// ) ) );
 }
 endif;
 add_action( 'after_setup_theme', 'fuzzco_setup' );
-
-
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function fuzzco_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'fuzzco_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'fuzzco_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function fuzzco_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'fuzzco' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'fuzzco' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'fuzzco_widgets_init' );
 
 /**
  * Deregister wordpress default scripts that
@@ -143,11 +94,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
 
 
 /**

@@ -2,7 +2,6 @@
   "use": [
     "postcss-import",
     "autoprefixer",
-    "css-mqpacker",
     "cssnano"
   ],
   "output": "style.min.css",

@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "fastclick": "^1.0.6",
-    "foundation-sites": "^6.2.1",
     "jquery": "^2.2.3"
   }
 }
