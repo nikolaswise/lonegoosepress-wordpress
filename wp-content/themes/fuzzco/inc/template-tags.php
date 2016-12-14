@@ -120,3 +120,21 @@ function fuzzco_category_transient_flusher() {
 }
 add_action( 'edit_category', 'fuzzco_category_transient_flusher' );
 add_action( 'save_post',     'fuzzco_category_transient_flusher' );
+
+
+// Add Shortcode
+function fancy_button_shortcode( $atts , $content = null ) {
+
+  // Attributes
+  $atts = shortcode_atts(
+    array(
+      'button_url' => null
+    ),
+    $atts,
+    'fancy_button'
+  );
+
+  return '<a class="button--fancy" href="' . $atts[button_url] . '">' . $content . '</a>';
+
+}
+add_shortcode( 'fancy_button', 'fancy_button_shortcode' );
