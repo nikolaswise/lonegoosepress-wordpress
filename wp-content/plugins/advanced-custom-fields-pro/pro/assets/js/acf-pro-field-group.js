@@ -241,7 +241,7 @@
 		type: 'repeater',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		events: {
@@ -257,6 +257,13 @@
 		
 		render: function(){
 			
+			this.render_layout();
+			this.render_collapsed();
+			
+		},
+		
+		render_layout: function(){
+			
 			// vars
 			var layout = this.setting('layout input:checked').val();
 			
@@ -266,13 +273,7 @@
 			
 		},
 		
-		_change_layout: function( e ){
-			
-			this.render();
-			
-		},
-		
-		_focus_collapsed: function( e ){
+		render_collapsed: function(){
 			
 			// vars
 			var $select = this.setting('collapsed select');
@@ -308,6 +309,18 @@
 			// render
 			acf.render_select( $select, choices );
 			
+		},
+		
+		_change_layout: function( e ){
+			
+			this.render_layout();
+			
+		},
+		
+		_focus_collapsed: function( e ){
+			
+			this.render_collapsed();
+			
 		}
 		
 	});
@@ -331,7 +344,7 @@
 		type: 'flexible_content',
 		
 		actions: {
-			'render_settings':		'render',
+			'render_settings':		'render'
 		},
 					
 		render: function(){
@@ -646,13 +659,13 @@
 		type: 'clone',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		events: {
 			'change .acf-field-setting-display select':			'render_display',
 			'change .acf-field-setting-prefix_label input':		'render_prefix_label',
-			'change .acf-field-setting-prefix_name input':		'render_prefix_name',
+			'change .acf-field-setting-prefix_name input':		'render_prefix_name'
 		},
 		
 		render: function(){
@@ -666,20 +679,12 @@
 		
 		render_display: function(){
 			
-			// hide conditional logic
-			if( this.setting('display select').val() == 'seamless' ) {
-				
-				this.setting('conditional_logic').hide();
-				this.setting('wrapper').hide();
-				this.setting('layout').hide();
-				
-			} else {
-				
-				this.setting('conditional_logic').show();
-				this.setting('wrapper').show();
-				this.setting('layout').show();
-				
-			}	
+			// vars
+			var display = this.setting('display select').val()
+			
+			
+			// update data
+			this.$field.attr('data-display', display);
 			
 		},
 		
@@ -749,7 +754,7 @@
 		select2_ajax_data: function( data, args, params ){
 			
 			// bail early if not clone
-			if( args.ajax_action !== 'acf/fields/clone/query' ) return select2_args;
+			if( args.ajax_action !== 'acf/fields/clone/query' ) return data;
 			
 			
 			// find current fields
