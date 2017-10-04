@@ -40,8 +40,6 @@ window.app = app;
   If page level script add to js/pages/PAGENAME.js
   See pages/home.js example and call within events/onload.js
 */
-// $(function() {
-//   app.onload();
-//   app.yo();
-// });
-app.yo()
+$(function() {
+  app.yo();
+});
