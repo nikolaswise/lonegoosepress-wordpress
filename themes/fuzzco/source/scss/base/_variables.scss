@@ -27,23 +27,6 @@ $unison:                 1;
 // └───────────────┘
 $golden:                 1.618;
 
-// ┌──────┐
-// │ Grid │
-// └──────┘
-// ┌──────────────────┐
-// │ Container Widths │
-// └──────────────────┘
-$container-ratio:        11/12;
-$container-ratio-medium: 10/12;
-$container-ratio-large:  8/12;
-$max-width:              60rem;
-// ┌───────────────┐
-// │ Grid: Columns │
-// └───────────────┘
-$gutter:                 4%;
-$col-count:              12;
-
-
 // ┌────────────┐
 // │ Typography │
 // └────────────┘
@@ -73,6 +56,37 @@ $indent:                 1em;
 // └─────────────┘
 $sans: Theinhardt, Hevetica Nue, Arial, sans-serif;
 $serif: Vanitas-Black, Times, Georgia, serif;
+
+// ┌──────┐
+// │ Grid │
+// └──────┘
+// ┌──────────────────┐
+// │ Container Widths │
+// └──────────────────┘
+$container-ratio:        11/12;
+$container-ratio-medium: 10/12;
+$container-ratio-large:  8/12;
+$max-width:              60rem;
+// ┌───────────────┐
+// │ Grid: Columns │
+// └───────────────┘
+$gutter:                 4%;
+$col-count:              12;
+// ┌───────────────┐
+// │ Grid: Spacing │
+// └───────────────┘
+$vertical-range: 12;
+$spacing: (
+  padding-x: $gutter,
+  padding-y: $baseline,
+  padding-outer-x: $gutter / 2,
+  padding-outer-y: $baseline
+);
+$padding-x: map-get($spacing, padding-x);
+$padding-y: map-get($spacing, padding-y);
+$padding-outer-x: map-get($spacing, padding-outer-x);
+$padding-outer-y: map-get($spacing, padding-outer-y);
+
 
 // ┌─────────────────────────┐
 // │ Media Query Breakpoints │
