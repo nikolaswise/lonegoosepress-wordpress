@@ -1,16 +1,26 @@
 @charset 'utf-8';
 
-// Base
+// ┌──────┐
+// │ Base │
+// └──────┘
 @import 'base/normalize';
 @import 'base/variables';
 @import 'base/media-queries';
 
-// Grid
+// ┌──────┐
+// │ Grid │
+// └──────┘
 @import "grid/container";
 @import "grid/row";
 @import "grid/columns";
 @import "grid/leads";
 
-// Components
-// Layout
-// Pages
+// ┌────────────┐
+// │ Components │
+// └────────────┘
+// ┌────────┐
+// │ Layout │
+// └────────┘
+// ┌───────┐
+// │ Pages │
+// └───────┘
