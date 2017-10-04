@@ -3,16 +3,15 @@
   "version": "0.0.1",
   "description": "Starter kit using NPM based on Foundation",
   "scripts": {
-    "watch": "npm run clean && npm run watch:css & npm run watch:js & npm run serve",
+    "start": "npm run watch",
+    "watch": "npm run watch:css & npm run watch:js",
     "watch:css": "npm run build:watch:css && chokidar 'source/scss/' -c 'npm run build:watch:css'",
     "watch:js": "npm run build:watch:js && chokidar 'source/js/' -c 'npm run build:watch:js'",
     "build:watch:css": "node-sass --source-map-contents --source-map style.min.css.map source/scss/style.scss style.min.css && postcss --config postcss.watch.config.json",
     "build:watch:js": "rollup -c",
-    "build": "npm run clean && npm run build:css && npm run build:js",
+    "build": "npm run build:css && npm run build:js",
     "build:css": "node-sass source/scss/style.scss | postcss --config postcss.config.json",
-    "build:js": "rollup -c",
-    "serve": "browser-sync start --config bs-config.js",
-    "clean": "rm -rf {style.min.css,js/bundle.js} && mkdir -p js"
+    "build:js": "rollup -c"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
