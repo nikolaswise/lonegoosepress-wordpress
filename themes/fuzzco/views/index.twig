@@ -1,0 +1,14 @@
+{% extends "layout.twig" %}
+{% block content %}
+  <p>{{hey}},</p>
+
+  <p>{{message}}</p>
+
+  {% for post in posts %}
+    {% include 'partials/card.twig' %}
+  {% endfor %}
+
+
+  <br>
+  love, index.twig
+{% endblock %}

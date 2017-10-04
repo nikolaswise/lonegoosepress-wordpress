@@ -1,0 +1,12 @@
+<html>
+{% block html_head %}
+  {% include 'partials/head.twig' %}
+{% endblock %}
+  <body class="{{body_class}}">
+    {% block content %}
+      <!-- Add your main content here. -->
+      <p>SORRY! No content found!</p>
+    {% endblock %}
+    {% include 'partials/footer.twig' %}
+  </body>
+</html>
