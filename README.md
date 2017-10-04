@@ -11,6 +11,8 @@
 
 Install all development and front-end dependencies.
 
+**Note:** This project has no `package.json` yet. 
+
 ```
 $ npm install
 ```
