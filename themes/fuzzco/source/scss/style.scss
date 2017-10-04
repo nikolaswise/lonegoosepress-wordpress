@@ -15,6 +15,18 @@
 @import "grid/columns";
 @import "grid/leads";
 
+// ┌──────┐
+// │ Type │
+// └──────┘
+@import "type/scale";
+@import "type/size";
+@import "type/alignment";
+@import "type/leading";
+@import "type/tracking";
+@import "type/word-spacing";
+@import "type/font-style";
+@import "type/font-weight";
+
 // ┌────────────┐
 // │ Components │
 // └────────────┘

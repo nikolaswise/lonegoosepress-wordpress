@@ -1,0 +1,27 @@
+@mixin font-size($n) {
+  font-size: $n * 1rem;
+  line-height: $n * 1rem;
+}
+
+@if $font-size {
+  @for $i from 0 through 12 {
+    .txt-size-#{$i} { @include font-size($i); }
+  }
+}
+@if $font-size-responsive {
+  @include not-small ()  {
+    @for $i from 0 through 12 {
+      .ns-txt-size-#{$i} { @include font-size($i); }
+    }
+  }
+  @include medium-break ()  {
+    @for $i from 0 through 12 {
+      .md-txt-size-#{$i} { @include font-size($i); }
+    }
+  }
+  @include large-break ()  {
+    @for $i from 0 through 12 {
+      .lg-txt-size-#{$i} { @include font-size($i); }
+    }
+  }
+}

@@ -33,13 +33,24 @@ $golden:                 1.618;
 // ┌────────────┐
 // │ Type:Sizes │
 // └────────────┘
-$rem-size:               16px;
+$rem-size:               14px;
 $ratio:                  $golden;
 $body-size:              1rem;
 $small-size:             0.85rem;
 $baseline:               0.25rem;
 $leading:                5*$baseline;
 $indent:                 1em;
+$tracking-wide:          20;
+$tracking-tight:         -10;
+$wordspace-wide:         20;
+$wordspace-tight:        -10;
+$type-sizes: (
+  (14, 20),
+  (18, 22),
+  (20, 27),
+  (27, 32),
+  (100, 100)
+);
 
 // ┌────────────┐
 // │ Type:Faces │
@@ -56,6 +67,34 @@ $indent:                 1em;
 // └─────────────┘
 $sans: Theinhardt, Hevetica Nue, Arial, sans-serif;
 $serif: Vanitas-Black, Times, Georgia, serif;
+
+// ┌─────────────────────┐
+// │ Type:CSS Generation │
+// └─────────────────────┘
+$leading:                 true;
+$leading-responsive:      true;
+$tracking:                     false;
+$tracking-responsive:          false;
+$word-spacing:                 false;
+$word-spacing-responsive:      false;
+$alignment:               true;
+$alignment-responsive:    true;
+$font-scale:                   false;
+$font-scale-responsive:        false;
+$font-size:               true;
+$font-size-responsive:    true;
+$font-weight:             true;
+  $fw-thin:                    false;
+  $fw-light:                   false;
+  $fw-regular:            true;
+  $fw-medium:                  false;
+  $fw-demi:                    false;
+  $fw-bold:               true;
+  $fw-black:                   false;
+$font-weight-responsive:       false;
+$font-style:              true;
+$font-style-responsive:        false;
+
 
 // ┌──────┐
 // │ Grid │
