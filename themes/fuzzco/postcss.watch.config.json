@@ -1,7 +1,6 @@
 {
   "use": [
-    "postcss-import",
-    "autoprefixer",
+    "autoprefixer"
   ],
   "input": "style.min.css",
   "output": "style.min.css",

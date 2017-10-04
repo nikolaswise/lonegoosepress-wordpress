@@ -1,6 +1,5 @@
 {
   "use": [
-    "postcss-import",
     "autoprefixer",
     "cssnano"
   ],
