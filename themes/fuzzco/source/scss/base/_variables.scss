@@ -1,0 +1,62 @@
+//  Variables
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//  1. Colors
+//  2. Fonts
+//  3. Breakpoints
+
+// 1. Colors
+// ---------
+
+// Brand colors
+$green: #61C997;
+$darkblue: #312A37;
+
+// Brand Secondary
+$tan: #F4F1EC;
+$gold: #D8AC6C;
+$orange: #EF6145;
+
+
+// 2. Fonts
+// ---------
+
+$sans: Theinhardt, Hevetica Nue, Arial, sans-serif;
+$serif: Vanitas-Black, Times, Georgia, serif;
+
+// Font Sizes
+//
+// @type Map
+
+$font-sizes: (
+  'xs': 1.4rem,
+  's': 1.6rem,
+  'm': 2.0rem,
+  'l': 2.8rem,
+  'xl': 4.0rem
+);
+
+
+// 3. Breakpoints
+// ---------
+//
+// @type Map
+
+$breakpoints: (
+  'l': 1100px,
+  'm': 880px,
+  's': 700px,
+  'xs': 420px
+);
+
+
+
+
+// 4. Transition speeds
+// ---------
+
+$slow: 0.4s;
+$regular: 0.25s;
+$fast: 0.175s;

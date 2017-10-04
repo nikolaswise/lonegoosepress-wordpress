@@ -1,0 +1,13 @@
+{
+  "use": [
+    "postcss-import",
+    "autoprefixer",
+    "cssnano"
+  ],
+  "output": "style.min.css",
+  "local-plugins": true,
+  "watch": false,
+  "autoprefixer": {
+    "browsers": "> 5%"
+  }
+}
