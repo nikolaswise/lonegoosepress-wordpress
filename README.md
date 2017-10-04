@@ -1,26 +1,38 @@
 # Fuzzcode Wordpress Theme
 
+This repository contains common plugins and a scaffold theme for the development of Wordpress projects. The project root can be cloned directly into a `wp-content` folder. 
+
 ## Quick start
 
 ### Requirements
 
 * [NodeJS](http://nodejs.org/)
-* [MAMP](https://www.mamp.info/)
+* [FuzzCode Dev Space](#)
 
 ### Setup
 
-Install all development and front-end dependencies.
+Clone this project into your Dev Space `wp-content` folder:
 
-**Note:** This project has no `package.json` yet. 
+```
+$ git clone git@bitbucket.org:nikolaswise/fuzzcode-wordpress.git wp-content
+```
+
+Change your directory to the working theme:
+
+```
+$ cd wp-content/themes/fuzzco
+```
+
+Install all development and front-end dependencies:
 
 ```
 $ npm install
 ```
 
-Update proxy server within package.json to point to your local project domain.
+Start watching the assets for compilation:
 
 ```
-"serve": "browser-sync start --proxy 'fuzzcode.dev' --files '**/*' '*.php' --no-ghost-mode --no-notify"
+$ npm start
 ```
 
 ### File structure
@@ -69,7 +81,7 @@ For example:
 
 #### JavaScript
 
-JavaScript dependencies are managed using NPM and imported using [Browserfy](http://browserify.org/) via /source/js/app.js.
+JavaScript dependencies are managed using NPM and bundled using [Rollup](https://rollupjs.org/) via /source/js/app.js.
 
 Add dependency using:
 
@@ -86,22 +98,14 @@ $ npm install --save fastclick
 Within /source/js/app.js add:
 
 ```
-var dependencyName = require('DEPENDENCYNAME');
+import dependencyName from 'DEPENDENCYNAME';
 ```
 
 For example:
 
 ```
-var fastclick = require('fastclick');
+import fastclick from 'fastclick';
 ```
-
-### Development build server
-
-```
-$ npm run watch
-```
-
-When it finishes, a new browser window will open pointing to a local BrowserSync server.
 
 ### Production build
 
@@ -121,10 +125,6 @@ All deployments should be done using [DeployBot](https://deploybot.com/). Connec
 * [CSS style guide](https://bitbucket.org/fuzzco/fuzzcode/wiki/CSS%20Style%20Guide)
 * [HTML style guide](https://bitbucket.org/fuzzco/fuzzcode/wiki/HTML%20Style%20Guide)
 
-## Foundation documentation
-
-* http://foundation.zurb.com/sites/docs/sass-mixins.html
-
 ## Git commit guidelines
 
 * https://github.com/erlang/otp/wiki/Writing-good-commit-messages
@@ -136,7 +136,25 @@ Fuzzcode utilizes EditorConfig to maintain consistent coding styles accross diff
 
 Download the [EditorConfig](http://editorconfig.org/) Plugin for your editor.
 
+## Stage
+
+Stage the project to WP Engine (whatever that means, TBD really):
+
+```
+$ npm run stage
+```
+
+## Deploy
+
+Again, this will work at the end of the day but TBD on the details:
+
+```
+$ npm run deploy
+```
+
 ## Deploybot
+
+> Deploybot is probably going to be deprecated in favor of WP Engine git deploys.
 
 If deploying using Deploybot you must first deploy all files with only the build command ```npm install``` within the "Compile, compress, or minimize your code" section. Once all files have been deployed then add ```npm run build``` after ```npm install``` and redeploy all files. This will assure everything is correctly installed before a build is performed.
 
