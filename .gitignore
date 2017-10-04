@@ -21,39 +21,39 @@ debug.log
 
 # Ignore everything in the "wp-content" directory, except the "plugins" and
 # "themes" directories.
-wp-content/*
-!wp-content/plugins/
-!wp-content/mu-plugins/
-!wp-content/themes/
+#wp-content/*
+#!/plugins/
+#!wp-content/mu-plugins/
+#!wp-content/themes/
 
 # ... but DO ignore WordPress core themes and plugins
-wp-content/themes/twentythirteen/
-wp-content/themes/twentyfourteen/
-wp-content/themes/twentyfifteen/
-wp-content/plugins/akismet/
-wp-content/plugins/hello.php
+/themes/twentythirteen/
+/themes/twentyfourteen/
+/themes/twentyfifteen/
+/plugins/akismet/
+/plugins/hello.php
 
 # ignore huge applications folder
-wp-content/plugins/application/appps/
+/plugins/application/appps/
 
 # ignore more things
-wp-content/themes/**/.cache/
+/themes/**/.cache/
 
 # ignore node modules
-wp-content/themes/**/node_modules/
+/themes/**/node_modules/
 
 # ignore compiled CSS and JavaScript
-!wp-content/themes/**/style.css
-wp-content/themes/**/style.min.css
-wp-content/themes/**/bundle.js
+#!/themes/**/style.css
+/themes/**/style.min.css
+/themes/**/js
 
 #ignore npm debug log
-wp-content/themes/**/npm-debug.log
+/themes/**/npm-debug.log
 
 #ignore css and javascript sourcemaps
-wp-content/themes/**/maps/
-wp-content/themes/**/style.css.map
-wp-content/themes/**/*.*.map
+/themes/**/maps/
+/themes/**/style.css.map
+/themes/**/*.*.map
 
 # Don't ignore the production config file or markdown files.
 !config/production.yml
