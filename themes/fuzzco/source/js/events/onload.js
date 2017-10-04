@@ -1,7 +1,7 @@
 var $ = require('jquery');
 var homepage = require('../pages/home.js');
 
-module.exports = function () {
+export default function () {
   var button = $('<button/>').attr('class','button').html('click me').on('click', function() {
     alert('yo dog!');
 

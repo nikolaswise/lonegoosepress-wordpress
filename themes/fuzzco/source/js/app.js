@@ -1,32 +1,18 @@
-/*
-  Browserify
-
-  Define node_modles
-  var moduleName = require('moduleName');
-  e.g. var jquery = require('jquery');
-
-  Define local javascript
-  var script = require('./script.js');
-
-  More info:
-  https://ponyfoo.com/articles/a-gentle-browserify-walkthrough
-*/
-var $ = require('jquery');
-var fastclick = require('fastclick');
-var onload = require('./events/onload.js');
-var Debounce = require('./helpers/debounce.js');
-var Throttle = require('./helpers/throttle.js');
+import $ from 'jquery'
+// var fastclick = require('fastclick');
+import debounce from './helpers/debounce.js'
+import throttle from './helpers/throttle.js'
 
 // Browsernizr
 // Modernizr wrapper for use with browserify
 // https://www.npmjs.com/package/browsernizr
 // Call any required test below
-require('browsernizr/test/css/flexbox');
-require('browsernizr/test/svg');
-require('browsernizr/test/history');
+// require('browsernizr/test/css/flexbox');
+// require('browsernizr/test/svg');
+// require('browsernizr/test/history');
 
 // Require Browsernizr
-var Modernizr = require('browsernizr');
+// var Modernizr = require('browsernizr');
 
 // Browsernizr usage
 // console.log(Modernizr.flexbox);
@@ -38,9 +24,11 @@ var app = window.app || {};
 
 app.yo = function() {
   console.log('yo');
+  console.log(debounce)
+  console.log(throttle)
 }
 
-app.onload = onload;
+// app.onload = onload;
 
 // Replace/Create the global namespace
 window.app = app;
@@ -52,8 +40,8 @@ window.app = app;
   If page level script add to js/pages/PAGENAME.js
   See pages/home.js example and call within events/onload.js
 */
-$(function() {
-
-  app.onload();
-  app.yo();
-});
+// $(function() {
+//   app.onload();
+//   app.yo();
+// });
+app.yo()

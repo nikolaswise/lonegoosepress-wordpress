@@ -7,17 +7,17 @@
  * https://davidwalsh.name/javascript-debounce-function
  */
 
-module.exports = function debounce(func, wait, immediate) {
-  var timeout;
+export default function (fn, wait, immediate) {
+  let timeout;
   return function() {
-    var context = this, args = arguments;
-    var later = function() {
+    const context = this, args = arguments;
+    const later = function() {
       timeout = null;
-      if (!immediate) func.apply(context, args);
+      if (!immediate) fn.apply(context, args);
     };
-    var callNow = immediate && !timeout;
+    let callNow = immediate && !timeout;
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
+    if (callNow) fn.apply(context, args);
   };
 };

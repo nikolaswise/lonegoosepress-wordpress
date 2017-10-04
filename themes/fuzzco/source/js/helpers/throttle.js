@@ -5,24 +5,24 @@
  * https://remysharp.com/2010/07/21/throttling-function-calls
  */
 
-module.exports = function throttle(fn, threshhold, scope) {
+export default function (fn, threshhold, scope) {
   threshhold || (threshhold = 250);
-  var last,
+  let last,
       deferTimer;
   return function () {
-    var context = scope || this;
+    const context = scope || this;
 
-    var now = +new Date,
-        args = arguments;
+    const now = +new Date,
+          args = arguments;
     if (last && now < last + threshhold) {
       // hold on to it
       clearTimeout(deferTimer);
       deferTimer = setTimeout(function () {
-        last = now;
+        let last = now;
         fn.apply(context, args);
       }, threshhold);
     } else {
-      last = now;
+      let last = now;
       fn.apply(context, args);
     }
   };
