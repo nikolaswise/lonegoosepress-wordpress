@@ -1,3 +1,3 @@
 <?php
   $context = Timber::get_context();
-  Timber::render('single.twig', $context);
+  Timber::render('pages/single.twig', $context);

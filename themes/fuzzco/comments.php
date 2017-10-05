@@ -1,3 +1,3 @@
 <?php
   $context = Timber::get_context();
-  Timber::render('comments.twig', $context);
+  Timber::render('pages/comments.twig', $context);
