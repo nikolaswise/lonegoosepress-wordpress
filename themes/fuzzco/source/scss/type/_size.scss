@@ -1,6 +1,6 @@
 @mixin font-size($size) {
   font-size:   ( nth($size, 1) / $base-size ) * 1rem;
-  line-height: ( nth($size, 1) / $base-size ) * 1rem;
+  line-height: ( nth($size, 2) / $base-size ) * 1rem;
 }
 
 @if $font-size {
@@ -12,18 +12,24 @@
 }
 @if $font-size-responsive {
   @include not-small ()  {
-    @for $i from 0 through 12 {
-      .ns-txt-size-#{$i} { @include font-size($i); }
+    @each $size in $type-sizes {
+      $n: index($type-sizes, $size);
+      $i: $n - 1;
+      .ns-txt-size-#{$i} { @include font-size($size); }
     }
   }
   @include medium-break ()  {
-    @for $i from 0 through 12 {
-      .md-txt-size-#{$i} { @include font-size($i); }
+    @each $size in $type-sizes {
+      $n: index($type-sizes, $size);
+      $i: $n - 1;
+      .md-txt-size-#{$i} { @include font-size($size); }
     }
   }
   @include large-break ()  {
-    @for $i from 0 through 12 {
-      .lg-txt-size-#{$i} { @include font-size($i); }
+    @each $size in $type-sizes {
+      $n: index($type-sizes, $size);
+      $i: $n - 1;
+      .lg-txt-size-#{$i} { @include font-size($size); }
     }
   }
 }
