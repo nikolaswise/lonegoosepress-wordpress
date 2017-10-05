@@ -1,12 +1,7 @@
 <html>
-{% block html_head %}
-  {% include 'partials/head.twig' %}
-{% endblock %}
+{% include 'partials/head.twig' %}
   <body class="{{body_class}}">
-    {% block content %}
-      <!-- Add your main content here. -->
-      <p>SORRY! No content found!</p>
-    {% endblock %}
+    {% block content %}{% endblock %}
     {% include 'partials/footer.twig' %}
   </body>
 </html>
