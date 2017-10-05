@@ -1,11 +1,13 @@
-@mixin font-size($n) {
-  font-size: $n * 1rem;
-  line-height: $n * 1rem;
+@mixin font-size($size) {
+  font-size:   ( nth($size, 1) / $base-size ) * 1rem;
+  line-height: ( nth($size, 1) / $base-size ) * 1rem;
 }
 
 @if $font-size {
-  @for $i from 0 through 12 {
-    .txt-size-#{$i} { @include font-size($i); }
+  @each $size in $type-sizes {
+    $n: index($type-sizes, $size);
+    $i: $n - 1;
+    .txt-size-#{$i} { @include font-size($size); }
   }
 }
 @if $font-size-responsive {
