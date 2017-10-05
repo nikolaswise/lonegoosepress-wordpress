@@ -1,7 +1,7 @@
 {
   "name": "fuzzcode",
-  "version": "0.0.1",
-  "description": "Starter kit using NPM based on Foundation",
+  "version": "0.0.2",
+  "description": "A scaffold for FuzzCo Wordpress projects. Save time, make cool shit.",
   "scripts": {
     "start": "npm run watch",
     "watch": "npm run watch:css & npm run watch:js",
