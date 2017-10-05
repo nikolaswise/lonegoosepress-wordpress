@@ -1,7 +1,9 @@
 <html>
 {% include 'partials/head.twig' %}
   <body class="{{body_class}}">
-    {% block content %}{% endblock %}
+    <div class="wrapper">
+      {% block content %}{% endblock %}
+    </div>
     {% include 'partials/footer.twig' %}
   </body>
 </html>
