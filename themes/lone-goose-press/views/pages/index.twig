@@ -1,0 +1,21 @@
+{% extends "layouts/layout.twig" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>{{hey}},</p>
+      <p>{{message}}</p>
+    </div>
+  </div>
+  <div class="row">
+    {% for post in posts %}
+      <div class="col
+                  col-is-12
+                  md-col-is-4
+                  lg-col-is-3">
+        {% include 'partials/card.twig' %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

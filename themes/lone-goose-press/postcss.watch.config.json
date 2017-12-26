@@ -1,0 +1,13 @@
+{
+  "use": [
+    "autoprefixer"
+  ],
+  "input": "style.min.css",
+  "output": "style.min.css",
+  "local-plugins": true,
+  "watch": false,
+  "map": true,
+  "autoprefixer": {
+    "browsers": "> 5%"
+  }
+}

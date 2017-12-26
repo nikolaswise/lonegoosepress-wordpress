@@ -1,0 +1,43 @@
+@mixin font-weight($n) {
+  font-weight: $n;
+}
+
+@if $font-weight {
+  @if $fw-thin   { .txt-thin    { @include font-weight(100); } }
+  @if $fw-light  { .txt-light   { @include font-weight(200); } }
+  @if $fw-regular{ .txt-regular { @include font-weight(300); } }
+  @if $fw-medium { .txt-medium  { @include font-weight(400); } }
+  @if $fw-demi   { .txt-demi    { @include font-weight(500); } }
+  @if $fw-bold   { .txt-bold    { @include font-weight(600); } }
+  @if $fw-black  { .txt-black   { @include font-weight(700); } }
+}
+
+@if $font-weight-responsive {
+  @include not-small ()  {
+    @if $fw-thin   { .ns-txt-thin    { @include font-weight(100); } }
+    @if $fw-light  { .ns-txt-light   { @include font-weight(200); } }
+    @if $fw-regular{ .ns-txt-regular { @include font-weight(300); } }
+    @if $fw-medium { .ns-txt-medium  { @include font-weight(400); } }
+    @if $fw-demi   { .ns-txt-demi    { @include font-weight(500); } }
+    @if $fw-bold   { .ns-txt-bold    { @include font-weight(600); } }
+    @if $fw-black  { .ns-txt-black   { @include font-weight(700); } }
+  }
+  @include medium-break ()  {
+    @if $fw-thin   { .md-txt-thin    { @include font-weight(100); } }
+    @if $fw-light  { .md-txt-light   { @include font-weight(200); } }
+    @if $fw-regular{ .md-txt-regular { @include font-weight(300); } }
+    @if $fw-medium { .md-txt-medium  { @include font-weight(400); } }
+    @if $fw-demi   { .md-txt-demi    { @include font-weight(500); } }
+    @if $fw-bold   { .md-txt-bold    { @include font-weight(600); } }
+    @if $fw-black  { .md-txt-black   { @include font-weight(700); } }
+  }
+  @include large-break ()  {
+    @if $fw-thin   { .lg-txt-thin    { @include font-weight(100); } }
+    @if $fw-light  { .lg-txt-light   { @include font-weight(200); } }
+    @if $fw-regular{ .lg-txt-regular { @include font-weight(300); } }
+    @if $fw-medium { .lg-txt-medium  { @include font-weight(400); } }
+    @if $fw-demi   { .lg-txt-demi    { @include font-weight(500); } }
+    @if $fw-bold   { .lg-txt-bold    { @include font-weight(600); } }
+    @if $fw-black  { .lg-txt-black   { @include font-weight(700); } }
+  }
+}
