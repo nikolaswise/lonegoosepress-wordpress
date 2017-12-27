@@ -6,10 +6,7 @@ export default {
   format: 'iife',
   entry: 'source/js/app.js',
   dest: 'js/bundle.js',
-  moduleName: "fzc",
-  globals: {
-    jQuery: '$'
-  },
+  moduleName: "lgp",
   plugins: [
     nodeResolve({
       jsnext: true,
