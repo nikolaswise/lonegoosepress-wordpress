@@ -4,7 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 
 export default {
   format: 'iife',
-  entry: 'source/js/app.js',
+  entry: 'source/js/index.js',
   dest: 'js/bundle.js',
   moduleName: "lgp",
   plugins: [
