@@ -1,0 +1,1 @@
+const hello = whoever => console.log(`Hello ${whoever}`)

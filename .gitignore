@@ -46,8 +46,7 @@ mu-plugins/
 
 # ignore compiled CSS and JavaScript
 #!/themes/**/style.css
-/themes/**/style.min.css
-/themes/**/js
+!/themes/**/style.min.css
 
 #ignore npm debug log
 /themes/**/npm-debug.log
