@@ -1,7 +1,7 @@
 {
-  "name": "fuzzcode",
-  "version": "0.0.2",
-  "description": "A scaffold for FuzzCo Wordpress projects. Save time, make cool shit.",
+  "name": "lone goose press",
+  "version": "2.0.0",
+  "description": "",
   "scripts": {
     "start": "npm run watch",
     "watch": "npm run watch:css & npm run watch:js",
@@ -17,6 +17,8 @@
     "autoprefixer": "^6.3.6",
     "chokidar-cli": "^1.2.0",
     "cssnano-cli": "^1.0.4",
+    "imagemin-newer": "^1.0.2",
+    "js-yaml": "^3.10.0",
     "node-sass": "^4.5.3",
     "nodemon": "^1.9.1",
     "postcss-cli": "^2.5.1",
