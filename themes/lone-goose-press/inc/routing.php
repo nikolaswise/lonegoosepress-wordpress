@@ -14,8 +14,8 @@ Routes::map('/', function($params){
 Routes::map('impressions', function($params){
   Routes::load('routes/impressions.php');
 });
-Routes::map('impressions/:post', function($params){
-  Routes::load('routes/post.php');
+Routes::map('impressions/:slug', function($params){
+  Routes::load('routes/post.php', $params);
 });
 
 Routes::map('about', function($params){

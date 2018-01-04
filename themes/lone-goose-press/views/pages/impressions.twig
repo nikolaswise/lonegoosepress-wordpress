@@ -4,17 +4,17 @@
 <div class="grid-container leader-4">
   <main class="column-12 pre-6">
     <h1 class="text-center trailer-4">Impressions</h1>
-
-      <!-- forloop -->
-      <article class="trailer-4">
-        <h3>
-          <a href="{article.url}">{article.title}</a>
-        </h3>
-        <p class="trailer-0">{article.author}</p>
-        <p>{article.date | date('F jS\, Y')  }</p>
-      </article>
-      <hr class="trailer-4">
-      <!-- end for loop -->
+      {% for post in posts %}
+        <article class="trailer-4">
+          <h3>
+            <a href="/impressions/{{post.slug}}">{{post.title}}</a>
+          </h3>
+          <p class="trailer-0">{{post.author}}</p>
+          <p>{{post.date | date('F jS\, Y')  }}</p>
+          <p>{{post.content}}</p>
+        </article>
+        <hr class="trailer-4">
+      {% endfor %}
   </main>
 </div>
 {% endblock %}
