@@ -1,12 +1,12 @@
 .header {
-  background: url(/assets/img/cover-banner.png) no-repeat no-repeat center;
+  background: url(/wp-content/themes/lone-goose-press/source/img/cover-banner.png) no-repeat no-repeat center;
   background-size: cover;
   padding: 8*$baseline 0 8*$baseline 0;
   z-index: 1;
   position: relative;
 
   &:before {
-    background: url(/assets/img/dot-grid.png);
+    background: url(/wp-content/themes/lone-goose-press/source/img/dot-grid.png);
     content: '';
     position: absolute;
     top: 0;
