@@ -1,4 +1,35 @@
 {% extends "layouts/layout.twig" %}
 {% block content %}
-  <h1>Single</h1>
+<div class="grid-container leader-3">
+  <div class="column-24">
+    <div class="column-12 leader-1 trailer-1 tablet-hide">
+      <img class="trailer-1" src="{post.img}" alt="The Journey">
+    </div>
+
+    <div class="column-10 pre-1 tablet-pre-1">
+      <h2 class="trailer-1 font-size-2 leader-2">{{post[0].title}}</h2>
+      <p class="trailer-0">
+        {for author in authors}
+          <a href="{author.site}">{author.name}</a>
+        {endfor}
+      </p>
+      <p class="trailer-0">{{post[0].release}}</p>
+      <p class="trailer-0">{{post[0].dimensions}}</p>
+      <p>{{post[0].edition}}</p>
+      <p>{{post[0].edition_notes}}</p>
+      <p>$ {{post[0].price}}</p>
+      <div class="leader-1 trailer-1">
+        <a href="#" class="btn js-add-to-cart js-modal-toggle" data-modal="cart" data-id="{{post.title}}" data-price="{{post.price}}" data-shipping="10">Add to Cart</a>
+      </div>
+      <p class="leader-1">{{post[0].content}}</p>
+      <p>
+        <a href="/poems/#the-journey">Read Text</a>
+      </p>
+
+      <img class="tablet-show trailer-1" src="{post.img}" alt="{{post.title}}">
+
+    </div>
+  </div>
+</div>
+
 {% endblock %}

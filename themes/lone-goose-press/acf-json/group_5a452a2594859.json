@@ -60,7 +60,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "broadside"
+                "value": "post"
             }
         ],
         [
@@ -90,6 +90,13 @@
                 "operator": "==",
                 "value": "realization"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "poems"
+            }
         ]
     ],
     "menu_order": 0,
@@ -100,5 +107,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1514482804
+    "modified": 1515278746
 }

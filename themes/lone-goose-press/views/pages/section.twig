@@ -1,83 +1,31 @@
 {% extends "layouts/layout.twig" %}
 {% block content %}
 <div class="grid-container leader-3">
-  <main class="column-12 pre-6 post-6 tablet-column-10 tablet-pre-1 ">
-    <h2 class="text-center secondary-face trailer-2">{{data.catalog.sections.publications.title}}</h2>
-    <ul>
-      <li><a href="/publications/broadsides/">Broadsides</a></li>
-      <li><a href="/publications/books/">Books</a></li>
-      <li><a href="/publications/ephemera/">Chapbooks, Ephemera</a></li>
-    </ul>
-    <p>{{data.catalog.sections.publications.description}}</p>
+  <main class="column-12 pre-6 post-6 trailer-2">
+    <h2 class="text-center trailer-2">{{category | capitalize}}</h2>
+    <p>{content??}</p>
   </main>
 
-  <section class="leader-3">
-    <div class="column-24">
-      <h3 class='text-center trailer-1'>
-        <a href="/publications/books/">{{data.catalog.sections.publications.books.title}}</a>
-      </h3>
-    </div>
-
-    <div class="column-12">
-      <a href="/publications/books/">
-        <img src="/wp-content/themes/lone-goose-press/source/img/publication.png">
-      </a>
-      <p class="font-size--2">Photograph by Petar Iliav</p>
-    </div>
-    <div class="column-11 tablet-column-10 tablet-pre-1 leader-1">
-      <p>{{data.catalog.sections.publications.books.description}}</p>
-    </div>
-    <div class="column-24 trailer-2">
-      <h6 class="text-center body-face leader-half">
-       <a href="/publications/books/">View All Book Projects</a>
-      </h6>
-    </div>
-  </section>
-
-  <section class="leader-3">
-    <div class="column-24">
-      <h3 class='text-center trailer-1'>
-        <a href="/publications/broadsides/">{{data.catalog.sections.publications.broadsides.title}}</a>
-      </h3>
-    </div>
-    <div class="column-12">
-      <a href="/publications/broadsides/">
-        <img src="/wp-content/themes/lone-goose-press/source/img/design.png">
-      </a>
-      <p class="font-size--2">Photograph by Petar Iliav</p>
-    </div>
-    <div class="column-11 tablet-column-10 tablet-pre-1 leader-1">
-      {% for p in data.catalog.sections.publications.broadsides.description %}
-        <p>{{p}}</p>
-      {% endfor %}
-    </div>
-    <div class="column-24 trailer-2">
-      <h6 class="text-center body-face leader-half">
-       <a href="/publications/broadsides/">View All Broadsides</a>
-      </h6>
-    </div>
-  </section>
-
-  <section class="leader-3">
-    <div class="column-24">
-      <h3 class='text-center trailer-1'>
-        <a href="/publications/ephemera/">{{data.catalog.sections.publications.ephemera.title}}</a>
-      </h3>
-    </div>
-    <div class="column-12">
-      <a href="/publications/ephemera/">
-        <img src="/wp-content/themes/lone-goose-press/source/img/Ink_Can.jpg">
-      </a>
-      <p class="font-size--2">Photograph by Petar Iliav</p>
-    </div>
-    <div class="column-11 tablet-column-10 tablet-pre-1 leader-1">
-      <p>{{data.catalog.sections.publications.ephemera.description}}</p>
-    </div>
-    <div class="column-24 trailer-2">
-      <h6 class="text-center body-face leader-half">
-       <a href="/publications/ephemera/">View All Ephemera</a>
-      </h6>
-    </div>
-  </section>
+  {% for post in posts %}
+    <section class="column-10 pre-2 trailer-1 phone-trailer-3">
+      <div class="column-6">
+        <a href="{{post.slug}}">
+          <img src="{{post.image}}" alt="{{post.title}}">
+        </a>
+      </div>
+      <div class="column-4">
+        <h5 class="body-face phone-leader-0">
+          <a href="{{post.slug}}">
+            {{post.title}}
+          </a>
+        </h5>
+        <p class="trailer-0">By
+          {for author in authors}
+            <a href="{author.site}">{author.name}</a>
+          {endfor}
+        </p>
+      </div>
+    </section>
+  {% endfor %}
 </div>
 {% endblock %}

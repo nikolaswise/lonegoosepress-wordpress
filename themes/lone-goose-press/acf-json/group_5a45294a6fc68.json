@@ -133,7 +133,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "broadside"
+                "value": "post"
             }
         ],
         [
@@ -163,6 +163,13 @@
                 "operator": "==",
                 "value": "realization"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "broadsides"
+            }
         ]
     ],
     "menu_order": 0,
@@ -173,5 +180,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1514482902
+    "modified": 1515278731
 }

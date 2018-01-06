@@ -40,19 +40,25 @@ Routes::map('/checkout/problem', function($params){
 });
 
 Routes::map('/publications', function($params){
-  Routes::load('routes/section.php');
+  Routes::load('routes/publications.php');
 });
 Routes::map('/publications/:category', function($params){
-  Routes::load('routes/section.php');
+  Routes::load('routes/section.php', $params);
+});
+Routes::map('/publications/:category/:slug', function($params){
+  Routes::load('routes/single.php', $params);
 });
 
 
 Routes::map('/commisions', function($params){
-  Routes::load('routes/section.php');
+  Routes::load('routes/commisions.php');
 });
 
 Routes::map('/commisions/:category', function($params){
-  Routes::load('routes/section.php');
+  Routes::load('routes/section.php', $params);
+});
+Routes::map('/commisions/:category/:slug', function($params){
+  Routes::load('routes/single.php', $params);
 });
 
 Routes::map('/404', function($params){

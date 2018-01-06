@@ -4,7 +4,7 @@
   <main class="column-12 pre-6 post-6 leader-4">
     <h1 class="text-center trailer-2">{{post[0].title}}</h1>
     <h4 class="text-center trailer-0">{{post[0].author}}</h4>
-    <h5 class="text-center trailer-2">{{post.date | date('F jS\, Y')  }}</h5>
+    <h5 class="text-center trailer-2">{{post[0].date | date('F jS\, Y')  }}</h5>
 
     {{post[0].content}}
 
